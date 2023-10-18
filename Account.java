@@ -1,9 +1,12 @@
+import java.time.*;
+import java.util.Date;
+
 class Account {
     private int accountNumber;
     private int routingNumber;
     private double balance;
     private Customer customer;
-
+    private Date date;
 
     public Account() {
     }
@@ -13,7 +16,7 @@ class Account {
         this.routingNumber = 11223344;
         this.balance = 0.0;
         this.customer = customer;
-
+        this.date = new Date();
     }
 
     // make withdrawal and make deposit.
@@ -59,7 +62,7 @@ class Account {
 
     public String toString(){
         return "Account number: " + this.accountNumber + ", Routing number: " + this.routingNumber + ", Balance: " + this.balance
-                + this.getCustomer();
+                + this.getCustomer() + ", Date created: " + this.date;
     }
 
     public Customer getCustomer() {
